@@ -1,3 +1,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: "Antro";
+        font-weight: 400;
+        src: url('/fonts/AntroVectra-Bolder400.ttf.woff') format('woff');
+    }
+    @font-face {
+        font-family: "Damion";
+        font-weight: 400;
+        src: url('/fonts/Damion-Regular400.ttf') format('ttf');
+    }
+    @font-face {
+        font-family: "Yesteryear";
+        font-weight: 400;
+        src: url('/fonts/Yesteryear-Regular400.ttf') format('ttf');
+    }
+    @font-face {
+        font-family: "Martel";
+        font-weight: 200;
+        src: url('/fonts/MartelSans-ExtraLight200.ttf') format('ttf');
+    }
+    @font-face {
+        font-family: "Martel";
+        font-weight: 400;
+        src: url('/fonts/MartelSans-Regular400.ttf') format('ttf');
+    }
+    @font-face {
+        font-family: "Martel";
+        font-weight: 700;
+        src: url('/fonts/MartelSans-Bold700.ttf') format('ttf');
+    }
+}

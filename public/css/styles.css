@@ -15,7 +15,7 @@ color-palette:
 
 #nav-title {
     font-family: 'Damion', cursive;
-    font-size: 1.7rem;
+    font-size: 2.5rem;
     /*background: -webkit-linear-gradient(rgb(66,6,241), rgb(254, 24, 211),rgb(255,41,65));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;*/
@@ -26,6 +26,7 @@ color-palette:
     -webkit-animation: titleFade 6s ease infinite;
     -moz-animation: titleFade 6s ease infinite;
     animation: titleFade 6s ease infinite;
+    z-index: -4;
 }
 @-webkit-keyframes titleFade {
     0%{background-position:0% 100%}
@@ -44,8 +45,8 @@ color-palette:
 }
 
 body {
-    background: linear-gradient(178deg, #270245, #871a85);
-    background-size: 1000% 1000%;
+    background: linear-gradient(180deg, #270245, #871a85);
+    background-size: 100rem 100rem;
 }
 
 
@@ -189,9 +190,9 @@ body {
     right: 0;
     background: rgba(18, 16, 16, 0.1);
     opacity: 0;
-    z-index: 2;
+    z-index: -4;
     pointer-events: none;
-    animation: flicker 0.07s infinite;
+    /* animation: flicker .07s infinite; */
   }
   .crt::before {
     content: " ";
@@ -202,12 +203,39 @@ body {
     bottom: 0;
     right: 0;
     background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
-    z-index: 2;
+    z-index: -4;
     background-size: 100% 2px, 3px 100%;
     pointer-events: none;
   }
   .crt {
-    animation: textShadow 1.6s infinite;
+    /* animation: textShadow 1.6s infinite; */
   }
 
- 
+/* text glow */ 
+.no-scan {
+  z-index: 4!important;
+}
+.glow {
+  
+  color: rgb(255, 255, 255);
+  text-align: center;
+  transition: 0.3s;
+}
+.white {
+  color: rgb(255, 255, 255)!important;
+}
+.glow:hover {
+  animation: glow 1.5s ease-in-out infinite alternate;
+  -webkit-animation: glow 1.5s ease-in-out infinite alternate;
+  -moz-animation: glow 1.5s ease-in-out infinite alternate;
+  
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 11px #fff, 0 0 12px magenta, 0 0 13px magenta, 0 0 14px magenta, 0 0 15px magenta, 0 0 16px magenta;
+  }
+  to {
+    text-shadow: 0 0 10px #fff, 0 0 12px blueviolet, 0 0 13px blueviolet, 0 0 14px blueviolet, 0 0 15px blueviolet, 0 0 16px blueviolet, 0 0 17px orangered;
+  }
+}

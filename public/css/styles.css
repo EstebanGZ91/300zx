@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Damion&family=Martel+Sans:wght@200;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Yellowtail:400');
 
 
 /* font-family: 'Damion', cursive;
@@ -12,7 +13,9 @@ color-palette:
     Hot Magenta: RGB: (254, 24, 211)
     Electric Ultramarine: RGB: (66, 6, 241)
 */
-
+.yellowtail {
+  font-family: "Yellowtail", sans-serif;
+}
 #nav-title {
     font-family: 'Damion', cursive;
     font-size: 2.5rem;
@@ -44,11 +47,19 @@ color-palette:
     100%{background-position:150% 200%}
 }
 
-body {
+.bg-fade {
     background: linear-gradient(180deg, #270245, #871a85);
     background-size: 100rem 100rem;
 }
-
+.bg-geo {
+  background: fixed rgb(34, 25, 41) url("https://www.transparenttextures.com/patterns/inspiration-geometry.png");
+}
+.bg-purple {
+  background: scroll border-box linear-gradient(180deg, #270245b0, #871a85ab) /* rgba(19, 7, 26, 0.514) */;
+  border: solid 1px darkorchid;
+  margin: 0;
+  padding: 0;
+}
 
 @keyframes flicker {
     0% {
@@ -224,6 +235,9 @@ body {
 .white {
   color: rgb(255, 255, 255)!important;
 }
+.black {
+  background-color: black;
+}
 .glow:hover {
   animation: glow 1.5s ease-in-out infinite alternate;
   -webkit-animation: glow 1.5s ease-in-out infinite alternate;
@@ -233,9 +247,102 @@ body {
 
 @keyframes glow {
   from {
-    text-shadow: 0 0 10px #fff, 0 0 11px #fff, 0 0 12px magenta, 0 0 13px magenta, 0 0 14px magenta, 0 0 15px magenta, 0 0 16px magenta;
+    text-shadow: 
+      0 0 10px #fff,
+      0 0 11px #fff, 
+      0 0 12px white, 
+      0 0 13px magenta, 
+      0 0 14px magenta, 
+      0 0 15px magenta, 
+      0 0 16px magenta; 
   }
   to {
-    text-shadow: 0 0 10px #fff, 0 0 12px blueviolet, 0 0 13px blueviolet, 0 0 14px blueviolet, 0 0 15px blueviolet, 0 0 16px blueviolet, 0 0 17px orangered;
+    text-shadow: 
+    0 0 10px #fff, 
+    0 0 12px blueviolet, 
+    0 0 13px blueviolet, 
+    0 0 14px blueviolet, 
+    0 0 15px blueviolet, 
+    0 0 16px blueviolet, 
+    0 0 17px blueviolet;
   }
+}
+
+.neonText {
+  color: #fff;
+  text-shadow:
+    /* White glow */
+    0 0 5px #fff,
+    0 0 7px #fff,
+    0 0 11px #fff,
+    /* Green glow */
+    0 0 11px blueviolet,
+    0 0 21px blueviolet,
+    0 0 31px blueviolet,
+    0 0 40px blueviolet,
+    0 0 54px blueviolet;
+  animation: pulsate 0.11s ease-in-out infinite alternate
+}
+
+@keyframes pulsate {
+  100% {
+    /* Larger blur radius */
+    text-shadow:
+      0 0 4px #fff,
+      0 0 11px #fff,
+      0 0 19px #fff,
+      0 0 40px #f09,
+      0 0 80px #f09,
+      0 0 90px #f09,
+      0 0 100px #f09,
+      0 0 150px #f09;
+  }
+ 0% {
+    /* A slightly smaller blur radius */
+    text-shadow:
+      0 0 4px #fff,
+      0 0 10px #fff,
+      0 0 18px #fff,
+      0 0 38px #f09,
+      0 0 73px #f09,
+      0 0 80px #f09,
+      0 0 94px #f09,
+      0 0 140px #f09;
+  }
+}
+
+.z1 {
+  z-index: 1!important;
+}
+.z2 {
+  z-index: 2!important;
+}
+.z3 {
+  z-index: 3!important;
+}
+.zBack {
+  z-index: -4!important;
+}
+
+.brickWall {
+  position: relative;
+  height: auto;
+  display: block;
+  background-image: url('./../img/bricks.jpeg');
+  background-size: cover;
+}
+
+.brickWall:after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: radial-gradient(circle, transparent 25%, black 90%);
+}
+
+.b-example-divider {
+  height: 3rem;
+  background-color: rgba(0, 0, 0, .1);
+  border: solid rgba(0, 0, 0, .15);
+  border-width: 1px 0;
+  box-shadow: inset 0 0.5em 1.5em rgb(0 0 0 / 10%), inset 0 0.125em 0.5em rgb(0 0 0 / 15%);
 }

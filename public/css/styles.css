@@ -54,6 +54,9 @@ color-palette:
 .bg-geo {
   background: fixed rgb(34, 25, 41) url("https://www.transparenttextures.com/patterns/inspiration-geometry.png");
 }
+.bg-palm {
+  background: fixed url(./../img/palms.jpg);
+}
 .bg-purple {
   background: scroll border-box linear-gradient(180deg, #270245b0, #871a85ab) /* rgba(19, 7, 26, 0.514) */;
   border: solid 1px darkorchid;
@@ -194,7 +197,7 @@ color-palette:
   .crt::after {
     content: " ";
     display: block;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
@@ -208,7 +211,7 @@ color-palette:
   .crt::before {
     content: " ";
     display: block;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     bottom: 0;

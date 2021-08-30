@@ -43,7 +43,7 @@ color-palette:
     -webkit-animation: titleFade 6s ease infinite;
     -moz-animation: titleFade 6s ease infinite;
     animation: titleFade 6s ease infinite;
-    z-index: -4;
+    
 }
 @-webkit-keyframes titleFade {
     0%{background-position:0% 100%}
@@ -69,13 +69,20 @@ color-palette:
   background: fixed rgb(34, 25, 41) url("https://www.transparenttextures.com/patterns/inspiration-geometry.png");
 }
 .bg-palm {
-  background: fixed url(./../img/palms.jpg);
+  background: fixed url(./../img/palms.jpg) no-repeat center center ;
+  background-size: cover;
+  
 }
 .bg-purple {
-  background: scroll border-box linear-gradient(180deg, #270245b0, #871a85ab) /* rgba(19, 7, 26, 0.514) */;
+  background: fixed border-box /*linear-gradient(180deg, #270245b0, #871a85ab)*/ url("https://www.transparenttextures.com/patterns/inspiration-geometry.png") black ;
   border: solid 1px darkorchid;
   margin: 0;
   padding: 0;
+}
+.border-gradient {
+  border: 2px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to right, red, orange);
 }
 
 @keyframes flicker {
@@ -362,3 +369,4 @@ color-palette:
   border-width: 1px 0;
   box-shadow: inset 0 0.5em 1.5em rgb(0 0 0 / 10%), inset 0 0.125em 0.5em rgb(0 0 0 / 15%);
 }
+

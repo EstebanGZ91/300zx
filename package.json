@@ -17,6 +17,7 @@
     "express-session": "^1.17.2",
     "express-validator": "^6.12.1",
     "JSON": "^1.0.0",
+    "method-override": "^3.0.0",
     "mime-db": "^1.49.0",
     "mime-types": "^2.1.32",
     "multer": "^1.4.3",

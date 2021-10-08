@@ -6,7 +6,12 @@ const db = require('../database/models');
 
 const productsController = {
     create : (req,res) => {
-        res.render('./products/create');
+        db.Categoria.findAll()
+        .then(categorias => {
+            return res.render('./products/create', {categorias: categorias})
+        })
+        
+        
     },
     edit : (req,res) => {
         res.render('./products/edit');

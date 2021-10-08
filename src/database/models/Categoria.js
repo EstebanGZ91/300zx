@@ -21,13 +21,13 @@ module.exports = (sequelize, DataTypes) => {
     
     const Categoria = sequelize.define(alias, cols, config);
 
-    Categoria.associate = function (modelo) {
+      Categoria.associate = function (modelo) {
 
-            Categoria.belongsTo(modelo.Usuario, {
-                    as:"usuarios",
-                    foreingKey: "id_categoria"
-            });
-    };
+              Categoria.hasMany(modelo.Producto, {
+                     as:"productos",
+                     foreingKey: "id_categoria"
+             });
+      };
     
     
     return Categoria

@@ -9,15 +9,30 @@ const productsController = {
         db.Categoria.findAll()
         .then(categorias => {
             return res.render('./products/create', {categorias: categorias})
+        })   
+    },
+    store : (req,res) => {
+        db.Producto.create({
+            nombre: req.body.nombre,
+            fecha_creacion: req.body.fechaCreacion,
+            precio: req.body.precio,
+            descripcion: req.body.descripcion,
+            id_categoria: req.body.categoria
         })
-        
-        
+
+        res.redirect('/')
     },
     edit : (req,res) => {
         res.render('./products/edit');
     },
     detail: (req,res) => {
-        res.render('./products/detail');
+        db.Producto.findOne({
+            where: {id: req.params.id}
+        }).then((producto)=> {
+            if(producto) {
+                return res.render('./products/guitars', {producto:producto})
+            }
+        })
     },
     accessories: (req,res) => {
         res.render('./products/acces');

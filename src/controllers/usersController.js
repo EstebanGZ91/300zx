@@ -5,8 +5,8 @@ const usersController = {
     login: (req,res) => {
         res.render('./users/login')
     },
-    signup: (req,res) => {
-        res.render('./users/signup')
+    register: (req,res) => {
+        res.render('./users/register')
     },
     profile: (req,res) => {
         res.render('./users/profile')

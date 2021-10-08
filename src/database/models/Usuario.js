@@ -54,5 +54,5 @@ module.exports = (sequelize, DataTypes) => {
     };
     
     
-    return Tarjeta
+    return Usuario
 }

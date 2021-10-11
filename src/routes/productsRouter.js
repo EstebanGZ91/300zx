@@ -1,6 +1,8 @@
+
 const express = require('express');
 const router = express();
 const productsController = require('./../controllers/productsController');
+
 
 router.get('/', productsController.detail);
 
@@ -9,6 +11,8 @@ router.get('/edit', productsController.edit);
 router.get('/create', productsController.create);
 router.post('/create', productsController.store);
 
+router.get('/formulario', productsController.create);
+router.post('/formulario',productsController.store)
 
 router.get('/acc', productsController.accessories);
 

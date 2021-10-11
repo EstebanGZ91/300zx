@@ -1,26 +1,20 @@
-const fs = require('fs');
-const path = require('path');
 const db = require('../database/models');
 
 
 
 const productsController = {
     create : (req,res) => {
-        db.Categoria.findAll()
-        .then(categorias => {
-            return res.render('./products/create', {categorias: categorias})
-        })   
+            res.render('./products/formulario')   
     },
     store : (req,res) => {
-        db.Producto.create({
-            nombre: req.body.nombre,
-            fecha_creacion: req.body.fechaCreacion,
-            precio: req.body.precio,
-            descripcion: req.body.descripcion,
-            id_categoria: req.body.categoria
-        })
+          let productoPrueba ={
+              nombre: req.body.name,
+              precio: req.body.price,
+              categoria: req.body.category,
+              descripcion: req.body.description
+          }
 
-        res.redirect('/')
+         res.send(productoPrueba)
     },
     edit : (req,res) => {
         res.render('./products/edit');

@@ -25,19 +25,19 @@
       <form action="/products/create" method="POST" enctype="multipart/form-data">
         <div class="mb-3">
           <label for="inputNombre" class="form-label text-light">Ingrese Nombre de Producto</label>
-          <input type="text" class="form-control text-center w-50 mx-auto" id="inputNombre" name="nombre" aria-describedby="emailHelp">
+          <input type="text" class="form-control text-center w-50 mx-auto" id="inputNombre" name="nombre">
           <div id="emailHelp" class="form-text text-light"></div>
         </div>
         <div class="mb-3">
           <label for="inputDescripcion" class="form-label text-light">Ingrese Descripción</label>
-          <input type="text" class="form-control text-center w-50 mx-auto" id="inputDescripcion" name="descripcion" aria-describedby="emailHelp">
+          <input type="text" class="form-control text-center w-50 mx-auto" id="inputDescripcion" name="descripcion">
           <div id="emailHelp" class="form-text text-light">Validaciones</div>
         </div>
         <div class="mb-3">
           <label for="inputPrecio" class="form-label white">Precio</label>
           <input type="text" class="form-control text-center w-50 mx-auto" name="precio" id="inputPrecio">
         </div>
-        <select class="form-select w-50 mx-auto my-4 text-center" id="inputCategoria" aria-label="Default select example">
+        <select class="form-select w-50 mx-auto my-4 text-center" id="inputCategoria" >
           <option selected>Seleccionar Categoría:</option>
           <option class="white" name="categoria" value="1">Guitarra</option>
           <option class="white" name="categoria"value="2">Bajo</option>
@@ -51,7 +51,7 @@
           <input type="date" class="form-control text-center w-50 mx-auto" name="fechaCreacion" id="inputFechaCreacion">
         </div>
         <button type="reset" class="btn btn-primary my-4">Reiniciar</button>
-        <button type="submit" class="btn btn-primary my-4">Guardar</button>
+        <input type="submit" class="btn btn-primary my-4" value="Registrar"></input>
       </form>
     </section>
     <!-- FORM -->

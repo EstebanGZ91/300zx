@@ -1,10 +1,9 @@
 const db = require('../database/models');
 
 
-
 const productsController = {
     create : (req,res) => {
-            res.render('./products/formulario')   
+            res.render('./products/create')   
     },
     store : (req,res) => {
           let productoPrueba ={

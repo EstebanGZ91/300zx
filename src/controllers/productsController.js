@@ -1,4 +1,6 @@
 const db = require('../database/models');
+const multer = require('multer');
+
 
 
 const productsController = {
@@ -6,14 +8,15 @@ const productsController = {
             res.render('./products/create')   
     },
     store : (req,res) => {
-          let productoPrueba ={
-              nombre: req.body.name,
-              precio: req.body.price,
-              categoria: req.body.category,
-              descripcion: req.body.description
-          }
-
-         res.send(productoPrueba)
+        let producto = {
+            nombre: req.body.nombre,
+            descripcion: req.body.descripcion,
+            precio: req.body.precio,
+            categoria: req.body.categoria,
+            imagen: req.file.filename,
+            fechaCreacion: req.body.fechaCreacion
+        }
+        res.send(producto)
     },
     edit : (req,res) => {
         res.render('./products/edit');

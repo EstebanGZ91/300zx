@@ -8,15 +8,15 @@ const productsController = {
             res.render('./products/create')   
     },
     store : (req,res) => {
-        let producto = {
+        db.Producto.create({
             nombre: req.body.nombre,
             descripcion: req.body.descripcion,
             precio: req.body.precio,
-            categoria: req.body.categoria,
+            id_categoria: req.body.categoria,
             imagen: req.file.filename,
-            fechaCreacion: req.body.fechaCreacion
-        }
-        res.send(producto)
+            fecha_creacion: req.body.fechaCreacion
+        }) 
+        res.redirect('/')
     },
     edit : (req,res) => {
         res.render('./products/edit');

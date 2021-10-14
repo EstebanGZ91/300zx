@@ -24,6 +24,14 @@ module.exports = (sequelize, DataTypes) => {
                     type: DataTypes.DECIMAL(8,2),
                     allowNull: false
             },
+            descripcion: {
+                    type: DataTypes.STRING(80),
+                    allowNull: false
+            },
+            categoria: {
+                    type: DataTypes.STRING(80),
+                    allowNull: false
+            },
             imagen: {
                     type: DataTypes.STRING(80),
                     allowNull: true
@@ -43,14 +51,7 @@ module.exports = (sequelize, DataTypes) => {
     };
     
     const Producto = sequelize.define(alias, cols, config);
-
-       Producto.associate = function(modelo) {
-
-           Producto.hasMany(modelo.Categoria, {
-                   as:"categorias",
-                   foreingKey: "id_categoria"
-           });
-         }
+    
     
     
     return Producto

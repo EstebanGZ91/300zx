@@ -61,122 +61,28 @@
     <div class="album pb-5 ">
       <div class="container">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-
-          <div class="col">
+          <!-- <% for (let i = 0; i < 5 ; i++) {%>  -->
+          
+            <div class="col">
             <div class="card shadow-lg border-gradient ">
-              <a href="/products/id:?">
-              <img class="w-100 h-auto" src="img/GibsonLesPaulStandard50sHeritageCherrySunburst-3.1-1024x389.jpg" alt="Gibson Les Paul Standard 50's Heritage Cherry Sunburst">
+              <a href="/products/<%= productos[0].id %> ">
+              <img class="w-100 h-auto" src="img/<%= productos[0].imagen %> " alt="<%= productos[0].imagen %> ">
               </a>
               <div class="card-body text-light bg-dark">
-                <p class="h3 text-center white">USD 2900</p>
-                <p class="card-text">Gibson Les Paul Standard 50's Heritage Cherry Sunburst</p>
+                <p class="h3 text-center white"><%= productos[0].precio %> </p>
+                <p class="card-text"><%= productos[0].nombre %> </p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Borrar</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button>
+                    <a href="/products/delete" class="btn btn-sm btn-outline-secondary">Borrar</a>
+                    <a href="/products/create" class="btn btn-sm btn-outline-secondary">Editar</a>
                   </div>
                   <small class="text-muted">+info</small>
                 </div>
               </div>
             </div>
           </div>
-
-          <div class="col">
-            <div class="card shadow-lg border-gradient">
-              <a href="/products/id:?">
-              <img class="w-100 h-auto" src="img/GibsonLesPaulStandard50sHeritageCherrySunburst-3.1-1024x389.jpg" alt="Gibson Les Paul Standard 50's Heritage Cherry Sunburst">
-              </a>
-              <div class="card-body text-light bg-dark">
-                <p class="h3 text-center white">USD 2900</p>
-                <p class="card-text">Gibson Les Paul Standard 50's Heritage Cherry Sunburst</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Borrar</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button>
-                  </div>
-                  <small class="text-muted">9 mins</small>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card shadow-lg border-gradient">
-              <a href="/products/id:?">
-              <img class="w-100 h-auto" src="img/GibsonLesPaulStandard50sHeritageCherrySunburst-3.1-1024x389.jpg" alt="Gibson Les Paul Standard 50's Heritage Cherry Sunburst">
-              </a>
-              <div class="card-body text-light bg-dark">
-                <p class="h3 text-center white">USD 2900</p>
-                <p class="card-text">Gibson Les Paul Standard 50's Heritage Cherry Sunburst</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Borrar</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button>
-                  </div>
-                  <small class="text-muted">9 mins</small>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card shadow-lg border-gradient">
-              <a href="/products/id:?">
-              <img class="w-100 h-auto" src="img/GibsonLesPaulStandard50sHeritageCherrySunburst-3.1-1024x389.jpg" alt="Gibson Les Paul Standard 50's Heritage Cherry Sunburst">
-              </a>
-              <div class="card-body text-light bg-dark">
-                <p class="h3 text-center white">USD 2900</p>
-                <p class="card-text">Gibson Les Paul Standard 50's Heritage Cherry Sunburst</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Borrar</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button>
-                  </div>
-                  <small class="text-muted">9 mins</small>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card shadow-lg border-gradient">
-              <a href="/products/id:?">
-              <img class="w-100 h-auto" src="img/GibsonLesPaulStandard50sHeritageCherrySunburst-3.1-1024x389.jpg" alt="Gibson Les Paul Standard 50's Heritage Cherry Sunburst">
-              </a>
-              <div class="card-body text-light bg-dark">
-                <p class="h3 text-center white">USD 2900</p>
-                <p class="card-text">Gibson Les Paul Standard 50's Heritage Cherry Sunburst</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Borrar</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button>
-                  </div>
-                  <small class="text-muted">9 mins</small>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card shadow-lg border-gradient">
-              <a href="/products/id:?">
-              <img class="w-100 h-auto" src="img/GibsonLesPaulStandard50sHeritageCherrySunburst-3.1-1024x389.jpg" alt="Gibson Les Paul Standard 50's Heritage Cherry Sunburst">
-              </a>
-              <div class="card-body text-light bg-dark">
-                <p class="h3 text-center white">USD 2900</p>
-                <p class="card-text">Gibson Les Paul Standard 50's Heritage Cherry Sunburst</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                  </div>
-                  <small class="text-muted">9 mins</small>
-                </div>
-              </div>
-            </div>
-          </div>
+          <!-- <% } %> -->
           
-        </div>
 
       </div>
     </div>

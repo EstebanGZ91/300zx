@@ -24,7 +24,7 @@ module.exports = (sequelize, DataTypes) => {
        Categoria.associate = function (modelo) {
 
                Categoria.belongsTo(modelo.Producto, {
-                      as:"productos",
+                      as:"id_categoria",
                       foreingKey: "id_categoria"
               });
        };

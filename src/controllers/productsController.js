@@ -12,7 +12,7 @@ const productsController = {
             nombre: req.body.nombre,
             descripcion: req.body.descripcion,
             precio: req.body.precio,
-            categorias: req.body.categoria,
+            categoria: req.body.categoria,
             imagen: req.file.filename,
             fecha_creacion: req.body.fechaCreacion
         })

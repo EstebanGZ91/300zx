@@ -44,20 +44,13 @@ module.exports = (sequelize, DataTypes) => {
     
     const Producto = sequelize.define(alias, cols, config);
 
-      Producto.associate = function(modelo) {
+       Producto.associate = function(modelo) {
 
-        //   Producto.belongsToMany(modelo.Factura, {
-        //       as: "facturas",
-        //       through: "Producto_factura",
-        //       foreignKey: "id_producto",
-        //       otherKey: "id_factura",
-        //       timestamps: false
-        //   });
-          Producto.belongsTo(modelo.Categoria, {
-                  as:"categorias",
-                  foreingKey: "id_categoria"
-          });
-        }
+           Producto.hasMany(modelo.Categoria, {
+                   as:"categorias",
+                   foreingKey: "id_categoria"
+           });
+         }
     
     
     return Producto

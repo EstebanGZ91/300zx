@@ -4,11 +4,9 @@ const db = require("../database/models");
 const mainController = {
     index: (req,res) => {
         db.Producto.findAll({
-            where: {
-                eliminado: 0
-            }
+            where: {eliminado: 0}
         })
-        then((productos) => {
+        .then((productos) => {
             return res.render('index',{productos: productos})
         })
     },

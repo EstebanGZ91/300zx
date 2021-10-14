@@ -12,9 +12,12 @@ const productsController = {
             nombre: req.body.nombre,
             descripcion: req.body.descripcion,
             precio: req.body.precio,
-            id_categoria: req.body.categoria,
+            categorias: req.body.categoria,
             imagen: req.file.filename,
             fecha_creacion: req.body.fechaCreacion
+        })
+        .catch((e) => {
+            console.log(e)
         }) 
         res.redirect('/')
     },

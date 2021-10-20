@@ -13,18 +13,20 @@ router.get('/edit', productsController.edit);
 /* CREACION DE PRODUCTO */
 router.get('/create', productsController.create);
 router.post('/create',uploadFile.single('imagen'), productsController.store);
-
-
-router.get('/acc', productsController.accessories);
-
+/* SECCION ACCESORIOS */
+router.get('/accessories', productsController.accessories);
+/* SECCION AMPLIFICADOR */
 router.get('/amps', productsController.amplifiers);
-
+/* SECCION BAJOS */
 router.get('/bass', productsController.bass);
-
+/* SECCION EFECTOS */
 router.get('/fx', productsController.fx);
-
-router.get('/guitars/:id', productsController.detail);
-
+/* SECCION GUITARRAS */
+router.get('/guitars', productsController.guitars);
+/* SECCION VINTAGE */
 router.get('/vintage', productsController.vintage);
+/* DETALLE DE PRODUCTO */
+router.get('/detail/:id',productsController.detail)
+
 
 module.exports = router;

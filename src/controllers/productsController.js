@@ -29,27 +29,57 @@ const productsController = {
             where: {id: req.params.id}
         }).then((producto)=> {
             if(producto) {
-                return res.render('./products/guitars', {producto:producto})
+                return res.render('./products/detail', {producto:producto})
             }
         })
     },
     accessories: (req,res) => {
-        res.render('./products/acces');
+        db.Producto.findAll({
+            where: {categoria: "Accesorio", eliminado:0
+        }
+        }).then((producto) => {
+            res.render('./products/list', {productos: producto, categoria: "Accesorios"})
+        })  
     },
     amplifiers: (req,res) => {
-        res.render('./products/amps');
+        db.Producto.findAll({
+            where: {categoria: "Amplificador", eliminado:0
+        }
+        }).then((producto) => {
+            res.render('./products/list', {productos: producto, categoria: "Amplificadores"})
+        })  
     },
     bass: (req,res) => {
-        res.render('./products/bass');
+        db.Producto.findAll({
+            where: {categoria: "Bajo", eliminado:0
+        }
+        }).then((producto) => {
+            res.render('./products/list', {productos: producto, categoria: "Bajos"})
+        })  
     },
     fx: (req,res) => {
-        res.render('./products/fxs');
+        db.Producto.findAll({
+            where: {categoria: "FX", eliminado:0
+        }
+        }).then((producto) => {
+            res.render('./products/list', {productos: producto, categoria: "Efectos"})
+        })  
     },
     guitars: (req,res) => {
-        res.render('./products/guitars')
+        db.Producto.findAll({
+            where: {categoria: "Guitarra", eliminado:0
+        }
+        }).then((producto) => {
+            res.render('./products/list', {productos: producto, categoria: "Guitarras"})
+        })
     },
     vintage: (req,res) => {
-        res.render('./products/vintage')
+        db.Producto.findAll({
+            where: {categoria: "Vintage", eliminado:0
+        }
+        }).then((producto) => {
+            res.render('./products/list', {productos: producto, categoria: "Vintage"})
+        })
     }
 
 }

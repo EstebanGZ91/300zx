@@ -21,14 +21,7 @@ module.exports = (sequelize, DataTypes) => {
     
     const Categoria = sequelize.define(alias, cols, config);
 
-       Categoria.associate = function (modelo) {
-
-               Categoria.belongsTo(modelo.Producto, {
-                      as:"id_categoria",
-                      foreingKey: "id_categoria"
-              });
-       };
-    
+  
     
     return Categoria
 

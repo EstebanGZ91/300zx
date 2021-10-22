@@ -17,7 +17,7 @@
   
    <section class="container-md text-center bg-purple mx-auto my-4 rounded-3">
     <div class="h-auto p-5 ">
-      <h1 class="display-4 white martel text-center"><%= producto.nombre %> </h1>
+      <h1 class="display-4 white  text-center neonText yellowtail"><%= producto.nombre %> </h1>
     </div>
     <div class="album pb-5 ">
       <div class="container">
@@ -36,6 +36,30 @@
                     <img class="img-height img-fluid" src="/img/<%= producto.imagen %>" class="d-block w-100" alt="...">
                   </div> 
                 </div>
+                <!-- Button trigger modal -->
+                <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  Launch demo modal
+                </button> -->
+
+                <!-- Modal -->
+                <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-fullscreen">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Fotos</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <img class="img-height img-fluid text" src="/img/<%= producto.imagen %>" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div> -->
+
+                
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Previous</span>
